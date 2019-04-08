@@ -21,11 +21,23 @@ public class Materia {
     private int nivel;
     private Grupo grupo;
     private Profesor profesor;
+/////////////////////////////////////////////////////////////    
+      //CONSTRUCTOR
+    public Materia(int codigo, String nombre, int numeroCredito, int numeroHora, int nivel, Profesor profesor, Grupo grupo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.numeroCredito = numeroCredito;
+        this.numeroHora = numeroHora;
+        this.nivel = nivel;
+        this.profesor = profesor;
+        this.grupo = grupo;
+    }
 ////////////////////////////////////////////////////////////////////////////////
                               //Método ToString//
-    @Override
+     @Override
     public String toString() {
-        return "Materia{" + "codigo=" + codigo + ", nombre=" + nombre + ", numeroCredito=" + numeroCredito + ", numeroHora=" + numeroHora + ", nivel=" + nivel + ", grupo=" + grupo + ", profesor=" + profesor + '}';
+        return "\n    Materia: " + "\n     Codigo:" + codigo + "\n     Nombre: " + nombre + "\n     Numero de creditos: " + numeroCredito
+                + "\n     Numero de horas: " + numeroHora + "\n     Nivel: " + nivel + "\n     Grupo: " + grupo + "\n     Profesor: " + profesor;
     }
 ////////////////////////////////////////////////////////////////////////////////
                                 //Get and Set//
@@ -85,5 +97,7 @@ public class Materia {
     public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
     }
+////////////////////////////////////////////////////////////////////////////////
+  
 
 }

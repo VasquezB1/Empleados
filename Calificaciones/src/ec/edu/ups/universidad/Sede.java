@@ -6,7 +6,7 @@
 package ec.edu.ups.universidad;
 
 import java.util.ArrayList;
-
+import java.util.List;
 /**
  *
  * @author Byron PC
@@ -21,13 +21,16 @@ public class Sede {
     private String direccion;
     private String telefono;
     private ArrayList<Carrera> carrera;
+    private List<Carrera> carreras;
 ////////////////////////////////////////////////////////////////////////////////
                               //Método ToString//
     
     @Override
     public String toString() {
-        return "Sede{" + "codigo=" + codigo + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", carrera=" + carrera + '}';
+        return "Sede: " + "\n Codigo: " + codigo + "\n Nombre: " + nombre + "\n Direccion: " + direccion + "\n Telefono: " + telefono 
+                + "\n Carreras: " + carrera;
     }
+ 
 ////////////////////////////////////////////////////////////////////////////////
                                 //Get and Set//
     
@@ -70,5 +73,16 @@ public class Sede {
     public void setCarrera(ArrayList<Carrera> carrera) {
         this.carrera = carrera;
     }
-
+  public Sede(int codigo, String nombre, String direccion, String telefono) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        carreras = new ArrayList<>();
+    }
+    
+    public void agregarCarrera(Carrera carrera){
+        carreras.add(carrera);
+    }
+    
 }

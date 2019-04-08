@@ -50,4 +50,10 @@ public class Grupo {
         this.cupo = cupo;
     }
 
+    public Grupo(int codigo, String nombre, int cupo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cupo = cupo;
+    }
+
 }

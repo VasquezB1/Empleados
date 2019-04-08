@@ -21,10 +21,12 @@ public class HistorialCalificacion {
     private int examen2;
 ////////////////////////////////////////////////////////////////////////////////
                               //Método ToString//
-    @Override
+      @Override
     public String toString() {
-        return "HistorialCalificacion{" + "materia=" + materia + ", estudiante=" + estudiante + ", aprovechamiento1=" + aprovechamiento1 + ", examen1=" + examen1 + ", aprovechamiento2=" + aprovechamiento2 + ", examen2=" + examen2 + '}';
+        return "\n  Calificaciones:" + "\n   Materia: " + materia+ "\n   Aprovechamiento1: " + aprovechamiento1 + "\n   Examen1: " + examen1
+                + "\n   Aprovechamiento2: " + aprovechamiento2 + "\n   examen2: " + examen2 ;
     }
+    
 ////////////////////////////////////////////////////////////////////////////////
                                 //Get and Set//
     
@@ -76,4 +78,11 @@ public class HistorialCalificacion {
         this.examen2 = examen2;
     }
 
+    public HistorialCalificacion(int aprovechamiento1, int examen1, int aprovechamiento2, int examen2) {
+        this.aprovechamiento1 = aprovechamiento1;
+        this.examen1 = examen1;
+        this.aprovechamiento2 = aprovechamiento2;
+        this.examen2 = examen2;
+    }
+    
 }

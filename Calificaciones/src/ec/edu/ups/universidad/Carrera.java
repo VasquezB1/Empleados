@@ -6,6 +6,8 @@
 package ec.edu.ups.universidad;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.lang.reflect.Array;
 
 /**
  *
@@ -18,7 +20,7 @@ public class Carrera {
 
     private int codigo;
     private String nombre;
-    private ArrayList<Materia> materia;
+    private List<Materia> materias;
     private int numeroSemestre;
     private int numeroEstudiantes;
     private String titulo;
@@ -27,8 +29,10 @@ public class Carrera {
     
     @Override
     public String toString() {
-        return "Carrera{" + "codigo=" + codigo + ", nombre=" + nombre + ", materia=" + materia + ", numeroSemestre=" + numeroSemestre + ", numeroEstudiantes=" + numeroEstudiantes + ", titulo=" + titulo + '}';
+        return "\n  Carrera:" + "\n   Codigo: " + codigo + "\n   Nombre: " + nombre + "\n   Materias: " + materias + "\n   Numeros de semestres: " + numeroSemestre
+                + "\n   Numero de estudiantes: " + numeroEstudiantes + "\n   Titulo: " + titulo;
     }
+    
 ////////////////////////////////////////////////////////////////////////////////
                                 //Get and Set//
     
@@ -46,14 +50,6 @@ public class Carrera {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public ArrayList<Materia> getMateria() {
-        return materia;
-    }
-
-    public void setMateria(ArrayList<Materia> materia) {
-        this.materia = materia;
     }
 
     public int getNumeroSemestre() {
@@ -80,4 +76,22 @@ public class Carrera {
         this.titulo = titulo;
     }
 
+    public Carrera(){
+         materias=new ArrayList<>();
+     }
+    
+    public void agregarMateria(Materia materia){
+        materias.add(materia);
+    }
+    
+    public Carrera(int codigo, String nombre, int numeroSemestre, int numeroEstudiantes, String Titulo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.numeroSemestre = numeroSemestre;
+        this.numeroEstudiantes = numeroEstudiantes;
+        this.titulo = Titulo;
+        materias = new ArrayList<>();
+                
+    }
+    
 }

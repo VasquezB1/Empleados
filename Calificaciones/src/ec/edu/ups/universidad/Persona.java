@@ -85,5 +85,27 @@ public class Persona {
     public void setSede(Sede sede) {
         this.sede = sede;
     }
+    ///////////////////CONSTRUCTOR
+    ///////////////////////////////1RE Método
+    public Persona(int codigo){
+        this.setCodigo(codigo);
+    }
+////////////////////////////////////////////////////
+    //2DO MÉTODO
+    public Persona(int codigo, String nombre, String cedula) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cedula = cedula;
+    }
+////////////////////////////////////////////////////////////////////
+    //3RE MÉTODO
+    public Persona(int codigo, String nombre, String cedula, String telefono, String direccion, String correo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.correo = correo;
+    }
 
 }
