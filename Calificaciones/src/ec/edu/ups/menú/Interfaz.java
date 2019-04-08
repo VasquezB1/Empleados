@@ -48,7 +48,7 @@ public class Interfaz {
         HistorialCalificacion calificacionAlgebraPepito= new HistorialCalificacion(20, 10, 8, 15);
         HistorialCalificacion calificacionEticaJuanito = new HistorialCalificacion(30, 10, 12, 25);
         HistorialCalificacion calificacionProgramacionJuanito = new HistorialCalificacion(30, 8, 10, 25);
-        HistorialCalificacion calificacionEstrucuturaMarta = new HistorialCalificacion(15, 2, 18, 10);
+        HistorialCalificacion calificacionEstructuraMarta = new HistorialCalificacion(15, 2, 18, 10);
         HistorialCalificacion calificacionLogicaMarta = new HistorialCalificacion(10, 20, 15, 20);
         
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,10 +87,14 @@ public class Interfaz {
 ////////////////////////////////////////////////////////////////////////////////////////////
         Pepito.agregarHistorialCalificacion(calificacionMatematicasPepito);
         Pepito.agregarHistorialCalificacion(calificacionAlgebraPepito);
-        
-        
-        
+        Juanito.agregarHistorialCalificacion(calificacionEticaJuanito);
+        Juanito.agregarHistorialCalificacion(calificacionProgramacionJuanito);
+        Marta.agregarHistorialCalificacion(calificacionEstructuraMarta);
+        Marta.agregarHistorialCalificacion(calificacionLogicaMarta);
         //Imprimir Valores//
-       
+            System.out.println(Cuenca);
+            System.out.println(Pepito);
+            System.out.println(Juanito);
+            System.out.println(Marta);
     }
 }
